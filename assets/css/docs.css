@@ -82,12 +82,12 @@
 
 .bd-example {
   padding: 1.5rem;
-  border: 0.125rem solid rgba(0, 0, 0, 0.05); }
+  border: 0.125rem solid rgba(0, 0, 0, 0.025); }
 
 .highlight {
   padding: 1.625rem;
   margin-bottom: 1.25rem;
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: rgba(0, 0, 0, 0.025); }
 
 .chroma {
   margin-bottom: 0; }
@@ -365,3 +365,8 @@
 
 .name {
   font-size: .8125rem; }
+
+@media (min-width: 1200px) {
+  .row-cols-xl-8 > * {
+    flex: 0 0 12.5%;
+    max-width: 12.5%; } }
