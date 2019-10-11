@@ -356,9 +356,8 @@
   background-color: #f8f9fa;
   border-radius: .5rem; }
 
-.list .bi {
-  width: 2em;
-  height: 2em; }
+.list {
+  font-size: 2rem; }
 
 .btn-group > .btn {
   flex-shrink: 0; }
