@@ -337,8 +337,9 @@
   .hero hr {
     max-width: 100px; }
 
-.hero-search {
-  max-width: 400px; }
+@media (min-width: 768px) {
+  .icon-search {
+    width: 35%; } }
 
 .bi {
   display: inline-block;

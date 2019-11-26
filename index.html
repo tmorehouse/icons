@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Bootstrap Icons · Official open source icon library for Bootstrap</title>
 <meta name="description" content="Official open source icon library for Bootstrap">
-<meta name="generator" content="Hugo 0.58.3">
+<meta name="generator" content="Hugo 0.59.1">
 
 <link rel="stylesheet" href="/assets/css/bootstrap.css"><link rel="stylesheet" href="/assets/css/docs.css">
 
@@ -66,10 +66,10 @@
           <a class="nav-link " href="https://getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://getbootstrap.com/docs/4.3/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.4/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');">Icons</a>
@@ -109,7 +109,7 @@
       </li>
     </ul>
 
-    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/icons/archive/v0.2.0.zip">Download</a>
+    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/icons/archive/v1.0.0-alpha.zip">Download</a>
   </div>
 </header>
 
@@ -133,7 +133,7 @@
     <hr class="my-4">
 
     <p class="text-muted">
-      Currently v0.2.0
+      Currently v1.0.0-alpha
       <span class="px-1">&#8226;</span>
       <a href="#icons">Icons</a>
       <span class="px-1">&#8226;</span>
@@ -2086,7 +2086,10 @@
   <div class="col-md-4 col-xl-3">
 <h3 id="css">CSS</h3>
 
-<p>You can also use the SVG within your CSS (<strong>be sure to escape any characters</strong>, such as <code>#</code> to <code>%23</code> when specifying hex color values):
+<p>You can also use the SVG within your CSS (<strong>be sure to escape any characters</strong>, such as <code>#</code> to <code>%23</code> when specifying hex color values). When no dimensions are specified via <code>width</code> and <code>height</code> on the <code>&lt;svg&gt;</code>, the icon will fill the available space.</p>
+
+<p>The <code>viewBox</code> attribute is required if you wish to resize icons with <code>background-size</code>. Note that the <code>xmlns</code> attribute is required.</p>
+
   </div>
   <div class="col-md-8 col-xl-9">
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">bi</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
@@ -2119,14 +2122,28 @@
   </div>
 </div>
 
+<h2 id="working-with-svgs">Working with SVGs</h2>
+
+<p>SVGs are awesome to work with, but they do have some known quirks to work around. Given the numerous ways in which SVGs can be used, we haven&rsquo;t included these attributes and workarounds in our code.</p>
+
+<ul>
+<li><p><strong>Focus handling is broken in Internet Explorer and Edge.</strong> When embedding your SVGs, add <code>focusable=&quot;false&quot;</code> to the <code>&lt;svg&gt;</code> element. <a href="https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element">Learn more on Stack Overflow.</a></p></li>
+
+<li><p><strong>Browsers inconsistently announce SVGs as <code>&lt;img&gt;</code> tags with voice assistance.</strong> Include <code>role=&quot;img&quot;</code> when possible to avoid any issues. <a href="https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-2">See this article for details.</a></p></li>
+
+<li><p><strong>Safari skips <code>aria-label</code> when used non-focusable SVGs.</strong> As such, use <code>aria-hidden=&quot;true&quot;</code> when embedding the <code>&lt;svg&gt;</code> file and use CSS to visually hidden an equivalent label. <a href="https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-6">More details here.</a></p></li>
+</ul>
+
+<p>Found another issue with SVGs we should note? Please open an issue to share details.</p>
+
     </main><footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-left">
   <div class="container">
     <ul class="bd-footer-links">
       <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
       <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-      <li><a href="https://getbootstrap.com/docs/4.3/about/overview/">About</a></li>
+      <li><a href="https://getbootstrap.com/docs/4.4/about/overview/">About</a></li>
     </ul>
-    <p>Currently v0.2.0. Icons and documentation licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>.</p>
+    <p>Currently v1.0.0-alpha. Icons and documentation licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>.</p>
   </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
